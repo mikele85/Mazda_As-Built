@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace Mazda_As_Built
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
+            this.Text += " " + System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductVersion;
         }
     }
 }
