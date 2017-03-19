@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mazda_As-Built", "Mazda_As-Built\Mazda_As-Built.csproj", "{C77C486F-138B-4110-AA77-203F885E4001}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{120395A2-AD36-4A48-BA5A-013A7CBC727A}"
+	ProjectSection(SolutionItems) = preProject
+		DevelopSteps.txt = DevelopSteps.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

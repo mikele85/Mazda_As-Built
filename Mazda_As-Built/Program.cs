@@ -5,8 +5,11 @@ using System.Windows.Forms;
 
 namespace Mazda_As_Built
 {
+
+   
     static class Program
     {
+        
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
