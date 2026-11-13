@@ -1,0 +1,24 @@
+name: Build Android APK
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '8.4'
+    - name: Build Debug APK
+      run: |
+        if [ -f ./gradlew ]; then chmod +x ./gradlew && ./gradlew assembleDebug --no-daemon; else gradle assembleDebug --no-daemon; fi
+    - uses: actions/upload-artifact@v4
+      with:
+        name: App-Debug
+        path: "**/build/outputs/apk/debug/*.apk"
